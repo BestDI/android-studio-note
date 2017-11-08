@@ -15,7 +15,7 @@
 ![](./image/method-settings.png)
 
 * 普通代码（相关设置窗口）  
-![](code-settings.png)
+![](./image/code-settings.png)
 
 **断点大致可分为以下几类：**
 * 普通断点
@@ -101,7 +101,7 @@
 ## 六、异常断点
 在有些情况下，我们只对某些特定的异常感兴趣，而且希望程序在发生该异常时就能断下来，就像保存现场一样。Android Studio已经赋予了我们这个能力，即 **异常断点**。    
 
-具体设置方法：**打开 *“View Breakpoints”* ，点击加号并添加你感兴趣的异常**
+具体设置方法：**打开 *“View Breakpoints”* ，点击加号并添加你感兴趣的异常**  
 ![](./image/test_exception_break_point.png)  
 
 上图中我们设置了关心的异常 IndexOutOfBoundsException，下面我们写一段测试代码：
@@ -121,11 +121,11 @@ public class MainActivity extends AppCompatActivity {
 注：如果此时你触发的是一个NullPointerException，则不会触发异常断点（因为还没有添加到“感兴趣”列表中）
 
 
-有同学会想，如果我捕捉了异常还会触发异常断点吗？  
-*答：即使进行了 try...catch... 捕捉异常，断点依然会在 catch 之前触发*
+**有同学会想，如果我捕捉了异常还会触发异常断点吗？**   
+答：即使进行了 try...catch... 捕捉异常，断点依然会在 catch 之前触发
 
-还有同学会想，如果我对所有的异常或未知的异常感兴趣呢？  
-*答：目前我也没找到好解决办法，试了“勾选 Any Exception”、“添加 Exception”、“添加 UndeclaredThrowableException” 这几种方法，都未能快速定位到异常代码，知道的同学可以PR下。*
+**还有同学会想，如果我对所有的异常或未知的异常感兴趣呢？**  
+答：目前我也没找到好解决办法，试了“勾选 Any Exception”、“添加 Exception”、“添加 UndeclaredThrowableException” 这几种方法，都未能快速定位到异常代码，知道的同学可以PR下。
 
 ## 七、Field WatchPoint
 前面我们添加“异常断点”并且点击“加号”后，显示的第二个项 **Java Field Watchpoints** 是干什么的呢？  
